@@ -43,7 +43,7 @@ module TruncateHtml
         if token.html_tag?
           @truncated_html << token
         elsif @word_boundary
-          @truncated_html << token if @chars_remaining - token.length >= 0
+          @truncated_html << token
         else
           @truncated_html << token[0, @chars_remaining]
         end
